@@ -14,7 +14,16 @@ set autoindent
 set mouse=a
 
 set cursorline
-set cursorlineopt=number
+set cursorlineopt=both
+
+augroup MyCursorLine
+  autocmd!
+  autocmd ColorScheme * highlight CursorLine   cterm=NONE ctermbg=235
+  autocmd ColorScheme * highlight CursorLineNr cterm=NONE ctermbg=235
+augroup END
+
+highlight CursorLine   cterm=NONE ctermbg=235
+highlight CursorLineNr cterm=NONE ctermbg=235
 
 set hidden
 set incsearch hlsearch
